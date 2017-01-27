@@ -51,6 +51,8 @@
     // var myRevenueMessage = document.getElementById("revenue");
     var myRevenueMessage = $('#revenue');
     myImage.attr("src", "static/coffee_beans.jpg");
+    // myImage.fadeOut(1000);
+    // myImage.fadeIn(1000);
     var drinksOrdered = [];
     // myImage.setAttribute("src", "static/coffee_beans.jpg");
 
@@ -66,8 +68,12 @@
         myRevenueMessage.html(myRevenue);
 
         myImage.attr("src", "static/coffee_machine.jpg");
-        setTimeout(function() { myImage.attr("src", "static/coffee_mug.jpg"); }, 1500);
-        setTimeout(function() { myImage.attr("src", "static/coffee_beans.jpg"); }, 4000);
+        myImage.fadeOut(3000);
+        setTimeout(function() { myImage.attr("src", "static/coffee_mug.jpg"); }, 3000);
+        myImage.fadeIn(3000);
+        myImage.fadeOut(3000);
+        setTimeout(function() { myImage.attr("src", "static/coffee_beans.jpg"); }, 9000);
+        myImage.fadeIn(3000)
     }
 
     // Append the drink_type to drinks_ordered and use console.log to view the output
